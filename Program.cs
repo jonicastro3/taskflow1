@@ -1,4 +1,4 @@
-﻿static void Main(string[] args)
+﻿﻿static void Main(string[] args)
 {
     Console.WriteLine("--- Sistema TaskFlow: Crear Tarea ---");
     Console.Write("Ingrese el nombre de la tarea: ");
@@ -20,3 +20,6 @@
         Console.WriteLine("¡Tarea guardada con éxito!");
     }
 }
+﻿Console.WriteLine("--- Sistema TaskFlow: Listado ---");
+            Console.WriteLine("1. Tarea de prueba");
+            Console.WriteLine("2. Otra tarea de prueba");
