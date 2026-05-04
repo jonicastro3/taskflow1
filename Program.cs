@@ -1,25 +1,17 @@
-﻿﻿static void Main(string[] args)
-{
-    Console.WriteLine("--- Sistema TaskFlow: Crear Tarea ---");
-    Console.Write("Ingrese el nombre de la tarea: ");
-    
-    // 1. Primero leemos lo que escribe el usuario
-    string nombreTarea = Console.ReadLine();
+﻿using System;
+using System.Collections.Generic;
 
-    // 2. Luego verificamos si está vacío
-    if (string.IsNullOrEmpty(nombreTarea))
+namespace TaskFlow
+{
+    class Tarea
     {
-        Console.WriteLine("Error: El nombre no puede estar vacío.");
+        public string Nombre { get; set; }
+        public string Estado { get; set; } = "Pendiente"; 
     }
-    else 
+
+    class Program
     {
-        Console.WriteLine($"Tarea '{nombreTarea}' capturada correctamente.");
-        
-        // 3. ACÁ VA EL ÚLTIMO PASO: Simular el guardado
-        Console.WriteLine("Guardando tarea en el sistema de NovaTech...");
-        Console.WriteLine("¡Tarea guardada con éxito!");
+        static List<Tarea> listaTareas = new List<Tarea>();
+        static void Main(string[] args) { }
     }
 }
-﻿Console.WriteLine("--- Sistema TaskFlow: Listado ---");
-            Console.WriteLine("1. Tarea de prueba");
-            Console.WriteLine("2. Otra tarea de prueba");
