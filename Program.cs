@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("--- Sistema TaskFlow: Listado ---");
+            Console.WriteLine("1. Tarea de prueba");
+            Console.WriteLine("2. Otra tarea de prueba");
