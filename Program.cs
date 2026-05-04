@@ -3,34 +3,32 @@ using System.Collections.Generic;
 
 namespace TaskFlow
 {
-    // 1. Creamos la estructura de la tarea
-    class Tarea
-    {
-        public string Nombre { get; set; }
-        public string Estado { get; set; } = "Pendiente"; 
-    }
-
     class Program
     {
-        // 2. Creamos la lista de tareas
-        static List<Tarea> listaTareas = new List<Tarea>();
+        // Simulamos una base de datos de tareas en memoria
+        static List<string> listaTareas = new List<string>();
 
-        // 3. El único método Main que ejecuta el programa
         static void Main(string[] args)
         {
-            // --- AVANCE 2: Carga de datos ---
-            listaTareas.Add(new Tarea { Nombre = "Aprender Git", Estado = "Completada" });
-            listaTareas.Add(new Tarea { Nombre = "Terminar Actividad 4" }); // Nace Pendiente
-            
-            Console.WriteLine("Datos cargados en el sistema...");
+            // Agregamos un par de tareas de prueba para que el listado no esté vacío
+            listaTareas.Add("Configurar el repositorio en GitHub");
+            listaTareas.Add("Aprender a hacer merges y resolver conflictos");
 
-            // --- AVANCE 3: Visualización funcional ---
-            Console.WriteLine("\n--- TaskFlow: Monitoreo de Estados ---");
-            foreach (var t in listaTareas)
+            Console.WriteLine("--- Sistema TaskFlow: Listado de Tareas ---");
+            Console.WriteLine("-------------------------------------------");
+            
+            if (listaTareas.Count == 0)
             {
-                string icono = t.Estado == "Completada" ? "[X]" : "[ ]";
-                Console.WriteLine($"{icono} {t.Nombre} | Estado: {t.Estado}");
+                Console.WriteLine("No hay tareas registradas en el sistema.");
             }
+            else
+            {
+                for (int i = 0; i < listaTareas.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {listaTareas[i]}");
+                }
+            }
+            Console.WriteLine("-------------------------------------------");
         }
     }
 }
